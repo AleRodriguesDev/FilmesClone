@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".view.FormLogin"
     android:background="@color/black"
     android:orientation="vertical">
@@ -19,33 +25,52 @@
         android:layout_marginStart="20dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/containerEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginEnd="20dp"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:errorEnabled="true"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/laranja"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
             android:background="@color/white"
-            android:inputType="textEmailAddress"/>
+            android:backgroundTint="@color/light_gray"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#757575" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/containerSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:errorEnabled="true"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/laranja"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
             android:background="@color/white"
-            android:inputType="numberPassword"/>
+            android:backgroundTint="@color/light_gray"
+            android:hint="Senha"
+            android:inputType="numberPassword"
+            android:textColorHint="#757575" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -56,7 +81,10 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:padding="15dp"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/black"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/white"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,3 +106,4 @@
         android:layout_margin="20dp"/>
 
 </LinearLayout>
+</ScrollView>
